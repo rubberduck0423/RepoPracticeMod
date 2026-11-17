@@ -1,0 +1,8 @@
+C:\Users\yunse\RepoModDevelopment\bin\Debug\netstandard2.1\RepoPracticeMod.deps.json
+C:\Users\yunse\RepoModDevelopment\bin\Debug\netstandard2.1\RepoPracticeMod.dll
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.csproj.AssemblyReference.cache
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.AssemblyInfoInputs.cache
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.AssemblyInfo.cs
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.csproj.CoreCompileInputs.cache
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.dll
