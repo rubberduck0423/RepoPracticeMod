@@ -6,3 +6,4 @@ C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.Assem
 C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.AssemblyInfo.cs
 C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.csproj.CoreCompileInputs.cache
 C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.dll
+C:\Users\yunse\RepoModDevelopment\obj\Debug\netstandard2.1\RepoPracticeMod.sourcelink.json

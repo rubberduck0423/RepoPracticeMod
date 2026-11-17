@@ -9,7 +9,8 @@
     ".NETStandard,Version=v2.1/": {
       "RepoPracticeMod/1.0.0": {
         "dependencies": {
-          "R.E.P.O.GameLibs.Steam": "0.4.4-ngd.0"
+          "R.E.P.O.GameLibs.Steam": "0.4.4-ngd.0",
+          "REPOModding-MenuLib": "2.6.2"
         },
         "runtime": {
           "RepoPracticeMod.dll": {}
@@ -27,6 +28,15 @@
       "R.E.P.O.GameLibs.Steam/0.4.4-ngd.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
+        }
+      },
+      "REPOModding-MenuLib/2.6.2": {
+        "runtime": {
+          "lib/netstandard2.0/MenuLib.dll": {
+            "assemblyVersion": "2.6.2.0",
+            "fileVersion": "2.6.2.0",
+            "localPath": "MenuLib.dll"
+          }
         }
       }
     }
@@ -50,6 +60,13 @@
       "sha512": "sha512-1Yo0JbKQgociO32lb0ac3doI00ifYf8TH4ZVyz5aBOa3F+hhTgqSHXT26zg0XX9lCjpNkmVTqDmLvIYG0mn4IQ==",
       "path": "r.e.p.o.gamelibs.steam/0.4.4-ngd.0",
       "hashPath": "r.e.p.o.gamelibs.steam.0.4.4-ngd.0.nupkg.sha512"
+    },
+    "REPOModding-MenuLib/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dWGbsGQFjzZhTyfNd/wcAbWoRs5o6ro84Y4t2iu3h+qaEzmwK1YwA34HvNV8XIhj60izhoNkGblXVXrfT39P3Q==",
+      "path": "repomodding-menulib/2.6.2",
+      "hashPath": "repomodding-menulib.2.6.2.nupkg.sha512"
     }
   }
 }

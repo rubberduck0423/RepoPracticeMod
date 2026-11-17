@@ -244,6 +244,15 @@
           "ref/netstandard2.1/websocket-sharp.dll": {}
         }
       },
+      "REPOModding-MenuLib/2.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MenuLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MenuLib.dll": {}
+        }
+      },
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1054,6 +1063,17 @@
         "ref/netstandard2.1/UnityEngine.NVIDIAModule.dll",
         "ref/netstandard2.1/UnityEngine.UI.dll",
         "ref/netstandard2.1/websocket-sharp.dll"
+      ]
+    },
+    "REPOModding-MenuLib/2.6.2": {
+      "sha512": "dWGbsGQFjzZhTyfNd/wcAbWoRs5o6ro84Y4t2iu3h+qaEzmwK1YwA34HvNV8XIhj60izhoNkGblXVXrfT39P3Q==",
+      "type": "package",
+      "path": "repomodding-menulib/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/MenuLib.dll",
+        "repomodding-menulib.2.6.2.nupkg.sha512",
+        "repomodding-menulib.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -2944,6 +2964,7 @@
       "BepInEx.Core >= 5.*",
       "Linkoid.Repo.Plugin.Build >= *",
       "R.E.P.O.GameLibs.Steam >= *-*",
+      "REPOModding-MenuLib >= 2.6.2",
       "UnityEngine.Modules >= 2022.3.62"
     ]
   },
@@ -3028,6 +3049,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[*-*, )"
+          },
+          "REPOModding-MenuLib": {
+            "target": "Package",
+            "version": "[2.6.2, )"
           },
           "UnityEngine.Modules": {
             "include": "Compile",

@@ -82,6 +82,10 @@
               "target": "Package",
               "version": "[*-*, )"
             },
+            "REPOModding-MenuLib": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
             "UnityEngine.Modules": {
               "include": "Compile",
               "suppressParent": "All",
