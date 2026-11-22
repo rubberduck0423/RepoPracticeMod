@@ -7,6 +7,9 @@
     <Authors>YourName</Authors>
     <Version>1.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<CopyFilesToPluginOutputDirectoryOnBuild>false</CopyFilesToPluginOutputDirectoryOnBuild>
+	<CopyFilesToPluginOutputDirectoryOnRun>false</CopyFilesToPluginOutputDirectoryOnRun>
+	<DefaultItemExcludes>$(DefaultItemExcludes);plugins/**</DefaultItemExcludes>
   </PropertyGroup>
 
   <!-- Add Package Sources -->

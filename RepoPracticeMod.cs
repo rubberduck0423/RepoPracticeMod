@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace RepoPracticeMod;
 
-[BepInPlugin("MaNyaNyo.RepoPracticeMod", "RepoPracticeMod", "1.0")]
+[BepInPlugin("MaNyaNyo.RepoPracticeMod", "RepoPracticeMod", "1.4")]
 [BepInDependency("nickklmao.menulib", BepInDependency.DependencyFlags.HardDependency)]
 public class RepoPracticeMod : BaseUnityPlugin
 {
@@ -25,14 +25,25 @@ public class RepoPracticeMod : BaseUnityPlugin
 
         Patch();
 
-        MenuAPI.AddElementToMainMenu(parent =>
+        MenuAPI.AddElementToEscapeMenu(parent =>
         {
-            MenuAPI.CreateREPOButton(
-                "RepoDev Test",
-                () => Logger.LogInfo("테스트 버튼을 눌렀습니다."),
-                parent,
-                localPosition: Vector2.zero
-            );
+            var position = new Vector2(0f, 0f);
+            var buttons = parent.GetComponentsInChildren<MenuButton>(true);
+            bool foundButton = false;
+
+            foreach (var button in buttons)
+            {
+                Vector3 buttonPosition = parent.InverseTransformPoint(button.transform.position);
+
+                if (!foundButton || buttonPosition.y < position.y)
+                {
+                    position = new Vector2(buttonPosition.x, buttonPosition.y);
+                    foundButton = true;
+                }
+            }
+
+            position.y -= 40f;
+            MenuAPI.CreateREPOButton("모드", OpenModPage, parent, localPosition: position);
         });
 
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
@@ -52,5 +63,41 @@ public class RepoPracticeMod : BaseUnityPlugin
     private void Update()
     {
         // Code that runs every frame goes here
+    }
+
+    private void OpenModPage()
+    {
+        var page = MenuAPI.CreateREPOPopupPage("모드", shouldCachePage: false, pageDimmerVisibility: true, spacing: 20f);
+
+        page.AddElementToScrollView(parent =>
+        {
+            var toggle = MenuAPI.CreateREPOToggle("무적", enabled =>
+            {
+                PlayerHealthPatch.GodModeEnabled = enabled;
+                Logger.LogInfo(enabled ? "ON" : "OFF");
+            }, parent, defaultValue: PlayerHealthPatch.GodModeEnabled);
+
+            return toggle.rectTransform;
+        });
+
+        page.AddElementToScrollView(parent =>
+        {
+            var button = MenuAPI.CreateREPOButton("아이템 소환", ItemMenu.Open, parent);
+            return button.rectTransform;
+        });
+
+        page.AddElementToScrollView(parent =>
+        {
+            var button = MenuAPI.CreateREPOButton("몬스터 소환", EnemyMenu.Open, parent);
+            return button.rectTransform;
+        });
+
+        page.AddElementToScrollView(parent =>
+        {
+            var button = MenuAPI.CreateREPOButton("뒤로가기", () => page.ClosePage(closePagesAddedOnTop: false), parent);
+            return button.rectTransform;
+        });
+
+        page.OpenPage(openOnTop: false);
     }
 }
