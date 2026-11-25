@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace RepoPracticeMod;
 
-[BepInPlugin("MaNyaNyo.RepoPracticeMod", "RepoPracticeMod", "1.4")]
+[BepInPlugin("MaNyaNyo.RepoPracticeMod", "RepoPracticeMod", "1.0")]
 [BepInDependency("nickklmao.menulib", BepInDependency.DependencyFlags.HardDependency)]
 public class RepoPracticeMod : BaseUnityPlugin
 {
@@ -57,21 +57,21 @@ public class RepoPracticeMod : BaseUnityPlugin
 
     internal void Unpatch()
     {
-        Harmony?.UnpatchSelf();
+        
     }
 
     private void Update()
     {
-        // Code that runs every frame goes here
+        
     }
 
     private void OpenModPage()
     {
-        var page = MenuAPI.CreateREPOPopupPage("모드", shouldCachePage: false, pageDimmerVisibility: true, spacing: 20f);
+        var page = MenuAPI.CreateREPOPopupPage("모드", shouldCachePage: false, pageDimmerVisibility: true, spacing: 20f); // 모드 창
 
-        page.AddElementToScrollView(parent =>
+        page.AddElementToScrollView(parent => //스크롤 바
         {
-            var toggle = MenuAPI.CreateREPOToggle("무적", enabled =>
+            var toggle = MenuAPI.CreateREPOToggle("무적", enabled => // 무적 토글
             {
                 PlayerHealthPatch.GodModeEnabled = enabled;
                 Logger.LogInfo(enabled ? "ON" : "OFF");
@@ -80,19 +80,19 @@ public class RepoPracticeMod : BaseUnityPlugin
             return toggle.rectTransform;
         });
 
-        page.AddElementToScrollView(parent =>
+        page.AddElementToScrollView(parent => // 아이템 소환 버튼
         {
             var button = MenuAPI.CreateREPOButton("아이템 소환", ItemMenu.Open, parent);
             return button.rectTransform;
         });
 
-        page.AddElementToScrollView(parent =>
+        page.AddElementToScrollView(parent => // 몬스터 소환 버튼
         {
             var button = MenuAPI.CreateREPOButton("몬스터 소환", EnemyMenu.Open, parent);
             return button.rectTransform;
         });
 
-        page.AddElementToScrollView(parent =>
+        page.AddElementToScrollView(parent => // 뒤로가기 버튼
         {
             var button = MenuAPI.CreateREPOButton("뒤로가기", () => page.ClosePage(closePagesAddedOnTop: false), parent);
             return button.rectTransform;

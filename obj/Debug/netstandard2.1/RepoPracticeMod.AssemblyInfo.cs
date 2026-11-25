@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YourName")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f5ed3bc87b2d79fb9f8775ca6354250822cef85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+816c9a05cfd2e67d243e0f0407c95603823ea6ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepoPracticeMod")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepoPracticeMod")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

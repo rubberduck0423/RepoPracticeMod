@@ -8,7 +8,7 @@ internal static class PlayerHealthPatch
     internal static bool GodModeEnabled { get; set; }
 
     [HarmonyPrefix]
-    private static bool Prefix(PlayerHealth __instance)
+    private static bool Prefix(PlayerHealth __instance)// Hurt() 앞에 실행
     {
         if (!GodModeEnabled)
         {
